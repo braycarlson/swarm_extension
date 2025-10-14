@@ -1,0 +1,39 @@
+<idea-plugin>
+    <id>com.example.swarm</id>
+
+    <name>swarm</name>
+
+    <vendor url="https://github.com/braycarlson">Brayden Carlson</vendor>
+
+    <description><![CDATA[
+        swarm is a file management utility that copies content from designated files and directories, while providing directory tree generation capabilities for selected filesystem objects.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationConfigurable
+                parentId="tools"
+                instance="SwarmConfigurable"
+                id="SwarmConfigurable"
+                displayName="swarm"/>
+
+        <applicationService serviceImplementation="SwarmSettings"/>
+    </extensions>
+
+    <actions>
+        <action id="LaunchSwarm"
+                class="LaunchSwarm"
+                text="Open swarm Here"
+                description="Launch swarm with current project">
+            <!-- Editor right-click -->
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+            <!-- File tree right-click -->
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
+            <!-- Tab right-click -->
+            <add-to-group group-id="EditorTabPopupMenu" anchor="first"/>
+            <!-- Main menu for good measure -->
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>

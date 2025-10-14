@@ -1,7 +1,8 @@
 <idea-plugin>
-    <id>com.example.swarm</id>
+    <id>com.github.braycarlson.swarm</id>
 
     <name>swarm</name>
+    <version>0.0.1</version>
 
     <vendor url="https://github.com/braycarlson">Brayden Carlson</vendor>
 

@@ -4,7 +4,7 @@ plugins {
     id("org.jetbrains.intellij.platform") version "2.7.1"
 }
 
-group = "com.example"
+group = "com.github.braycarlson.swarm"
 version = "0.0.1"
 
 repositories {

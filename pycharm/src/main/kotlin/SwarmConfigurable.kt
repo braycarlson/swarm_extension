@@ -7,16 +7,15 @@ import javax.swing.JComponent
 import javax.swing.JPanel
 
 class SwarmConfigurable : Configurable {
-
     private var swarmPathField: TextFieldWithBrowseButton? = null
 
     override fun createComponent(): JComponent {
         swarmPathField = TextFieldWithBrowseButton().apply {
             addBrowseFolderListener(
-                "Select swarm Executable",
-                "Choose the location of swarm.exe",
                 null,
                 FileChooserDescriptorFactory.createSingleFileDescriptor("exe")
+                    .withTitle("Select executable")
+                    .withDescription("Choose the location of swarm.exe")
             )
         }
 

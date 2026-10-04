@@ -9,6 +9,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 .python-version
+!sublime_text/.python-version
 .Python
 
 env/

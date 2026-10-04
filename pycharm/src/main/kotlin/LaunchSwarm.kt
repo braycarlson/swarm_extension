@@ -37,7 +37,10 @@ class LaunchSwarm : AnAction() {
                 else -> virtualFile.parent?.path ?: virtualFile.path
             }
 
-            ProcessBuilder(executablePath, targetPath).start()
+            ProcessBuilder(executablePath, targetPath)
+                .redirectOutput(ProcessBuilder.Redirect.DISCARD)
+                .redirectError(ProcessBuilder.Redirect.DISCARD)
+                .start()
         } catch (ex: IOException) {
             Messages.showErrorDialog("Failed: ${ex.message}", "Error")
         }
